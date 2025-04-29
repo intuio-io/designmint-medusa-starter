@@ -1,0 +1,13 @@
+{
+  "name": "medusa-monorepo",
+  "private": true,
+  "scripts": {
+    "setup-admin": "cd admin && npm install --legacy-peer-deps && npm run build && npx medusa db:migrate",
+    "start-admin": "cd admin && npm run start",
+
+    "setup-storefront": "cd storefront && npm install --legacy-peer-deps && npm run build",
+    "start-storefront": "cd storefront && npm run start",
+
+    "deploy": "npm run setup-admin && npm run setup-storefront"
+  }
+}

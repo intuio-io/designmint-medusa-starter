@@ -1,0 +1,73 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: medusa-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: medusa-docker
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:alpine
+    container_name: medusa-redis
+    ports:
+      - "6379:6379"
+
+  storefront:
+    build:
+      context: ./storefront
+      dockerfile: Dockerfile
+    container_name: medusa-storefront
+    depends_on:
+      - admin
+    ports:
+      - "8000:8000"
+    environment:
+      MEDUSA_BACKEND_URL: http://admin:9000
+      NEXT_PUBLIC_MEDUSA_BACKEND_URL: http://localhost:9000
+      NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY: pk_4849f2d741d03b7a93feed52973f2d2c49a84a44208e2bea39aaca571d8e4d46
+      NEXT_PUBLIC_BASE_URL: http://localhost:8000
+      NEXT_PUBLIC_DEFAULT_REGION: us
+      REVALIDATE_SECRET: supersecret
+      NEXT_PUBLIC_LOGO: https://res.cloudinary.com/dqhzef5yz/image/upload/v1743743282/brandify_prev_ui_qq8rxd.png
+    volumes:
+      - storefront_node_modules:/app/storefront/node_modules
+      - ./storefront:/app/storefront
+
+  admin:
+    build:
+      context: ./admin
+      dockerfile: Dockerfile
+    container_name: medusa-admin
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - "9000:9000"
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/medusa-docker
+      REDIS_URL: redis://redis:6379
+      NODE_ENV: development
+      JWT_SECRET: supersecret
+      COOKIE_SECRET: supersecret
+      MEDUSA_ADMIN_ONBOARDING_TYPE: nextjs
+      STORE_CORS: http://localhost:8000,https://docs.medusajs.com
+      ADMIN_CORS: http://localhost:5173,http://localhost:9000,https://docs.medusajs.com
+      AUTH_CORS: http://localhost:5173,http://localhost:9000,http://localhost:8000,https://docs.medusajs.com
+      MEDUSA_ADMIN_ONBOARDING_NEXTJS_DIRECTORY: medusaV2-fashionhub-storefront
+      MEDUSA_BACKEND_URL: http://localhost:9000
+      VITE_BACKEND_URL: http://localhost:9000
+    volumes:
+      - admin_node_modules:/admin/node_modules
+      - ./admin:/admin
+
+volumes:
+  postgres_data:
+  storefront_node_modules:
+  admin_node_modules:

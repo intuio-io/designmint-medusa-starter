@@ -1,0 +1,15 @@
+{
+    "tailwind":{
+        "home_page":{
+            "title_banner":["text","text_color","background_color","start_date","end_date","default_text","default_text_color","default_background_color"],
+            "hero_banner" :["title","description","button_text","button_href","image1","start_date","end_date","default_title","default_description","default_button_text","default_button_href","default_image1"],
+            "limited_time_banner" : ["title","description","button_text","button_href","button_color","image1","start_date","end_date"],
+            "discount_banner" :["title","button_text","button_href","image1","start_date","end_date","default_title","default_button_text","default_button_href","default_image1"]
+        },
+        "product_listing":{}
+    },
+    "shoppo":{
+        "homepage":{},
+        "product_listing":{}
+    }
+}
