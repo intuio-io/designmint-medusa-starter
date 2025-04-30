@@ -1,0 +1,13 @@
+# NOTICE
+
+This repository contains a Medusa Starter project, which is licensed under the MIT License.
+
+## Third-Party Components
+
+This project includes or depends on the following third-party components that are not covered by the MIT License:
+
+- **designmint designer**: The designmint designer functionality used in the `storefront/src/modules/products/templates/designer/FrontendDesigner.jsx` component is proprietary software and is not covered by this project's MIT License. Users of this starter must separately obtain appropriate licensing for the designmint designer component directly from its copyright holders.
+
+## Usage Restrictions
+
+Users who fork, clone, or otherwise use this starter project must ensure they comply with all licensing requirements for included third-party components, particularly the designmint designer.

@@ -140,3 +140,11 @@ docker compose down -v
 
 ## Contributing
 Feel free to open issues or PRs if you'd like to improve or extend this setup!
+
+## License
+
+This Medusa starter is open source and available under the MIT License. See the [LICENSE](./LICENSE) file for more information.
+
+### Important Licensing Notice
+
+This starter includes the FrontendDesigner.jsx component in the admin interface which references or depends on the designmint designer, which is **not** open source. Users of this starter must separately obtain appropriate licensing for the designmint designer component. See the [NOTICE](./NOTICE) file for more details about third-party components.
