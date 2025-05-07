@@ -29,7 +29,7 @@ It’s the perfect bridge between **great user experience** and **error-free ord
 * Inline Toolbar for fast editing
 * Snap to Grid for perfect placement
 
-{% embed url="https://youtu.be/9dX-pBUJmt8" %}
+{% embed url="https://www.youtube.com/watch?v=9dX-pBUJmt8" %}
 
 #### 🎨 Visual Tools
 
@@ -41,7 +41,7 @@ It’s the perfect bridge between **great user experience** and **error-free ord
   * Copy/Paste SVG files directly
 * Clip Masking (Cut images to shapes)
 
-
+{% embed url="https://youtu.be/-JrrUhvLmR0" %}
 
 #### 📐 Layout Tools
 
@@ -52,12 +52,16 @@ It’s the perfect bridge between **great user experience** and **error-free ord
 * Keyboard Shortcuts for fast editing
 * Auto-alignment guidelines with Snap-to-Grid
 
+{% embed url="https://youtu.be/_6gPAqnwzdo" %}
+
 #### 🛠️ Admin Controls
 
 * Define customizable design areas per product
 * Upload templates with safe zone / cut line indicators
 * Create product-specific customization rules
 * View live previews of end-user designs
+
+{% embed url="https://youtu.be/9U1q1DSn1i8" %}
 
 ***
 
