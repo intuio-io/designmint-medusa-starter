@@ -1,150 +1,111 @@
-# 🧱 DesignMint Medusa Monorepo Setup
-
-This repository contains two separate projects:
-
-- `admin/` - Medusa Admin Dashboard
-- `storefront/` - Frontend Storefront UI
-
+---
+description: >-
+  DesignMint is a next-generation Web2Print Designer built to power
+  customization experiences for e-commerce products—from apparel to merchandise
+  and more.
 ---
 
-## 🚀 Quick Start
+# DesignMint Designer Docs
 
-### Option 1: Manual Setup
+### 🖌️ Introduction to DesignMint
 
-#### Prerequisites
-- Node.js (v18 or later)
-- PostgreSQL database server
-- Redis server
+**DesignMint** is a next-generation **Web2Print Designer** built to power customization experiences for e-commerce products—from apparel to merchandise and more.
 
-#### 🧰 1. Environment Setup
+Unlike traditional print designers, DesignMint connects directly to your e-commerce backend, understands product templates, and offers an intuitive, responsive, and production-ready design surface.
 
-1. Copy environment template files:
-   ```bash
-   cp admin/.env.template admin/.env
-   cp storefront/.env.template storefront/.env
-   ```
+It’s the perfect bridge between **great user experience** and **error-free order fulfillment**.
 
-2. Update the `.env` files with your PostgreSQL and Redis connection details:
-   
-   In `admin/.env`:
-   ```
-   DATABASE_URL=postgresql://postgres:postgres@localhost:5432/medusa-docker
-   REDIS_URL=redis://localhost:6379
-   ```
+***
 
-#### 🧰 2. Initial Setup
+### 🚀 Features of DesignMint
 
-Run this once to install dependencies and build both projects:
+#### ✏️ Text Tools
 
-```bash
-npm run deploy
-```
+* Rich Text Editing: Bold, Italics, Underline
+* Custom Fonts (Google Fonts + Uploaded)
+* Letter Spacing Control
+* Line Height Control
+* Text Alignment (Left, Center, Right)
+* Inline Toolbar for fast editing
+* Snap to Grid for perfect placement
 
-This command runs:
-- `npm install --legacy-peer-deps` in both `admin/` and `storefront/`
-- Builds both projects
-- Runs database migrations for the admin
+{% embed url="https://www.youtube.com/watch?v=9dX-pBUJmt8" %}
 
-#### 3. Running the Projects
+#### 🎨 Visual Tools
 
-Open two separate terminals:
+* Icon Library (Preloaded assets)
+* Upload custom images
+* Color fill controls
+* SVG support
+  * SVG Edit support
+  * Copy/Paste SVG files directly
+* Clip Masking (Cut images to shapes)
 
-📦 **Terminal 1: Start Admin**
-```bash
-npm run start-admin
-```
+{% embed url="https://youtu.be/-JrrUhvLmR0" %}
 
-Admin will be available at:
-http://localhost:9000
+#### 📐 Layout Tools
 
-⚠️ **Important**: After the admin backend is running, you need to:
-1. Go to Settings in the admin panel
-2. Copy the publishable API key
-3. Update the `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY` in `storefront/.env`
+* Layer Management
+  * Move up/down
+  * Group/Ungroup
+* Pan/Zoom on Canvas
+* Keyboard Shortcuts for fast editing
+* Auto-alignment guidelines with Snap-to-Grid
 
-🛍️ **Terminal 2: Start Storefront**
-```bash
-npm run start-storefront
-```
+{% embed url="https://youtu.be/_6gPAqnwzdo" %}
 
-Storefront will be available at:
-http://localhost:8000
-(Port may vary depending on config.)
+#### 🛠️ Admin Controls
 
-> **Note**: If this setup seems too complex, consider using Option 2 (Docker setup) below which handles all dependencies automatically.
+* Define customizable design areas per product
+* Upload templates with safe zone / cut line indicators
+* Create product-specific customization rules
+* View live previews of end-user designs
 
-### Option 2: Docker Setup
+{% embed url="https://youtu.be/9U1q1DSn1i8" %}
 
-Docker provides an easier way to set up the entire project with all dependencies.
+***
 
-#### Prerequisites
-- [Docker](https://docs.docker.com/get-docker/)
-- [Docker Compose](https://docs.docker.com/compose/install/)
+### 🔐 Licensing
 
-#### 🐳 1. Docker Setup
+> Private License
+>
+> DesignMint is a **proprietary, closed-source** product.
+>
+> Use is limited to authorized partners and licensees only.
+>
+> Redistribution, modification, or public disclosure is prohibited without express written consent.
 
-Run this command to start all services with Docker:
+**For licensing inquiries, please** [**contact us**](mailto:designmint@intuio.io)**.**
 
-```bash
-docker compose up
-```
+***
 
-This will:
-- Set up PostgreSQL database
-- Set up Redis
-- Build and start the Medusa admin backend
-- Build and start the storefront
+### 📥 Access & Request
 
-#### 2. Accessing the Services
+DesignMint is currently offered to select partners under early access.
 
-Once Docker Compose has finished startup:
+If you'd like to request access to the starter kit, or explore how DesignMint can power your e-commerce experience:
 
-- **Admin Dashboard**: http://localhost:9000
-- **Storefront**: http://localhost:8000
-- **PostgreSQL**: Available on `localhost:5432`
-  - User: `postgres`
-  - Password: `postgres`
-  - Database: `medusa-docker`
-- **Redis**: Available on `localhost:6379`
+* 📧 **Email**: [designmint@intuio.io](mailto:designmint@intuio.io)
+* 🛠️ **Integration Support**: Available upon partnership confirmation.
 
-#### 3. Stopping the Services
+***
 
-To stop all services:
+### 🔍 Under the Hood (Technical Highlights)
 
-```bash
-docker compose down
-```
+* Built in **React** (Frontend) and **Medusa** (Backend).
+* Backend Plugin for Designer Template Management.
+* Frontend Library for Embedding the Designer into product pages.
+* State Management: Lightweight custom context
+* Canvas Engine: Optimized for performance on web and mobile.
+* Accessible Keyboard Shortcuts & ARIA Labels.
+* Extensible via APIs for future workflows (approval steps, automated proofs, etc.
 
-To stop and remove volumes (will delete database data):
+***
 
-```bash
-docker compose down -v
-```
+## ✨ Excited to use DesignMint ?
 
----
+Love what you see? Ready to power up your e-commerce customization?
 
-## Scripts
+👉 **Request Access Now**: [designmint@intuio.io](mailto:designmint@intuio.io) / [https://designmint.intuio.io](https://designmint.intuio.io)
 
-| Script | Description |
-|--------|-------------|
-| `npm run deploy` | Installs and builds both admin & storefront |
-| `npm run setup-admin` | Setup, install & build admin; run migrations |
-| `npm run start-admin` | Starts admin server |
-| `npm run setup-storefront` | Setup, install & build storefront |
-| `npm run start-storefront` | Starts storefront server |
-
-## Notes
-- No background processes are used in this setup — run servers in separate terminals (when not using Docker).
-- When using Docker, all services are managed automatically.
-- The Docker setup includes persistent volumes for the database and node_modules.
-
-## Contributing
-Feel free to open issues or PRs if you'd like to improve or extend this setup!
-
-## License
-
-This Medusa starter is open source and available under the MIT License. See the [LICENSE](./LICENSE) file for more information.
-
-### Important Licensing Notice
-
-This starter includes the FrontendDesigner.jsx component in the admin interface which references or depends on the designmint designer, which is **not** open source. Users of this starter must separately obtain appropriate licensing for the designmint designer component. See the [NOTICE](./NOTICE) file for more details about third-party components.
+We are excited to bring you the future of Web2Print customization!

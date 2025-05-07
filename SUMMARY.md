@@ -1,6 +1,7 @@
 # Table of contents
 
-* [DesignMint Medusa Monorepo Setup](README.md)
+* [DesignMint Designer Docs](README.md)
+* [DesignMint Medusa Monorepo Setup](<README (1).md>)
 * [admin](admin/README.md)
   * [integration-tests](admin/integration-tests/README.md)
     * [Integration Tests](admin/integration-tests/http/README.md)
@@ -14,5 +15,4 @@
     * [Custom subscribers](admin/src/subscribers/README.md)
     * [Custom Workflows](admin/src/workflows/README.md)
 * [storefront](storefront/README.md)
-* [DesignMint Designer Docs](designmint-designer-docs.md)
 * [DesignMint License Notice](LICENSE-DESIGNMINT.md)
