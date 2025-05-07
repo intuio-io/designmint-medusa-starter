@@ -65,6 +65,18 @@ It’s the perfect bridge between **great user experience** and **error-free ord
 
 ***
 
+### 🔍 Under the Hood (Technical Highlights)
+
+* Built in **React** (Frontend) and **Medusa** (Backend).
+* Backend Plugin for Designer Template Management.
+* Frontend Library for Embedding the Designer into product pages.
+* State Management: Lightweight custom context
+* Canvas Engine: Optimized for performance on web and mobile.
+* Accessible Keyboard Shortcuts & ARIA Labels.
+* Extensible via APIs for future workflows (approval steps, automated proofs, etc.
+
+***
+
 ### 🔐 Licensing
 
 > Private License
@@ -79,30 +91,7 @@ It’s the perfect bridge between **great user experience** and **error-free ord
 
 ***
 
-### 📥 Access & Request
-
-DesignMint is currently offered to select partners under early access.
-
-If you'd like to request access to the starter kit, or explore how DesignMint can power your e-commerce experience:
-
-* 📧 **Email**: [designmint@intuio.io](mailto:designmint@intuio.io)
-* 🛠️ **Integration Support**: Available upon partnership confirmation.
-
-***
-
-### 🔍 Under the Hood (Technical Highlights)
-
-* Built in **React** (Frontend) and **Medusa** (Backend).
-* Backend Plugin for Designer Template Management.
-* Frontend Library for Embedding the Designer into product pages.
-* State Management: Lightweight custom context
-* Canvas Engine: Optimized for performance on web and mobile.
-* Accessible Keyboard Shortcuts & ARIA Labels.
-* Extensible via APIs for future workflows (approval steps, automated proofs, etc.
-
-***
-
-## ✨ Excited to use DesignMint ?
+## ✨ Access & Request
 
 Love what you see? Ready to power up your e-commerce customization?
 
